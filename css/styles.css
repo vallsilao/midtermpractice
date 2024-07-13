@@ -36,15 +36,15 @@ header {
 
 .main-nav {
     max-width: 1200px;
-    margin: 0 auto; /* Center the navigation horizontally */
+    margin: 0 auto; 
     padding: 20px 20px;
-    text-align: center; /* Align text in the navigation center */
+    text-align: center; 
 }
 
 .nav {
     display: flex;
     gap: 20px;
-    justify-content: center; /* Center items within the navigation */
+    justify-content: center; 
 }
 
 .nav a {
@@ -66,7 +66,7 @@ header {
     color: #ffffff;
     text-align: center;
     padding: 100px 20px;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +77,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    background: rgba(0, 0, 0, 0.5); 
 }
 .hero-content {
     position: relative;
@@ -145,42 +145,57 @@ header {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .content-wrapper {
     padding: 10px;
 }
 
-.intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-    padding: 50px 20px;
-}
 
-.intro .orangep {
-    color: #d69e3d;
-}
 
-.intro img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-
-.gallery {
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
-    padding: 50px 20px;
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    padding: 20px; 
 }
 
-.gallery img {
+.intro {
+    background-color: #f3f0e9; 
+    
+    text-align: center;
+}
+
+.content-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.large-img {
+    margin-bottom: 20px; 
+}
+
+.large-img img {
+    display: block; 
     width: 100%;
+    max-width: 100%; 
     height: auto;
 }
+
+.small-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+}
+
+.small-img img {
+    width: 100%;
+    max-width: 100%; 
+    height: auto;
+}
+
 
 .offers {
     display: flex;
@@ -294,21 +309,24 @@ header {
 
 .testimonial-text {
     position: relative;
-    z-index: 1; /* Ensure text is above overlay */
+    z-index: 1; 
 }
 
 blockquote {
     color: white;
     text-align: left;
-    z-index: 1; /* Ensure text is above overlay */
+    z-index: 1; 
 }
+
 
 .customer-name {
     margin-top: 10px;
     font-weight: bold;
     color: #d69e3d;
-    z-index: 1; /* Ensure text is above overlay */
+    z-index: 1; 
 }
+
+
 
 .overlay {
     position: absolute;
@@ -316,8 +334,8 @@ blockquote {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
-    z-index: 0; /* Ensure overlay is below text */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
 }
 
 .line {
@@ -348,7 +366,7 @@ blockquote {
     }
 
     .logo img {
-        width: 200px; /* Adjust as needed */
+        width: 200px; 
         margin-bottom: 0;
     }
 
@@ -357,9 +375,11 @@ blockquote {
         text-transform: uppercase;
     }
 
+
+
     .offer-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two columns for offers */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 20px;
     }
 
@@ -368,7 +388,7 @@ blockquote {
     }
 
     .offer-item:nth-child(3) {
-        grid-column: span 2; /* Span two columns to center it */
+        grid-column: span 2; 
     }
 
     .explore .content-wrapper {
@@ -384,7 +404,7 @@ blockquote {
 
     .testimonial-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width as needed */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
         gap: 20px;
         max-width: 1000px;
         margin: 0 auto;
@@ -449,7 +469,7 @@ blockquote {
         align-items: center;
     }
     .logo img {
-        width: 200px; /* Adjust as needed */
+        width: 200px; 
         margin-bottom: 0;
     }
     .nav a {
@@ -460,12 +480,12 @@ blockquote {
     
     .offer-grid {
         display: flex;
-        justify-content: space-between; /* Align items horizontally with space between them */
-        gap: 20px; /* Optional: Adds space between items */
+        justify-content: space-between; 
+        gap: 20px; 
     }
 
     .offer-item {
-        flex: 1; /* Allow items to grow and take up equal space */
+        flex: 1; 
         text-align: center;
     }
 }
