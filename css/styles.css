@@ -190,7 +190,7 @@ img {
 
 .offers,
 .menu,
-.locations,
+.loc,
 .about {
     display: flex;
     flex-direction: column;
