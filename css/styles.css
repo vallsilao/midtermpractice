@@ -12,6 +12,10 @@ body {
     line-height: 1.6;
 }
 
+h1, h2, h3, p {
+    margin-bottom: 20px;
+}
+
 h1 {
     font-size: 2.027rem;
 }
@@ -39,6 +43,9 @@ header {
     margin: 0 auto; 
     padding: 20px 20px;
     text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav {
@@ -57,6 +64,7 @@ header {
 .nav a:hover {
     color: #d69e3d;
 }
+
 .hero {
     position: relative;
     background-image: url('../images/hero-background.jpg'); 
@@ -71,6 +79,7 @@ header {
     justify-content: center;
     align-items: center;
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -79,19 +88,20 @@ header {
     height: 100%;
     background: rgba(0, 0, 0, 0.5); 
 }
+
 .hero-content {
     position: relative;
     z-index: 1;
     max-width: 600px;
 }
+
 .hero h1 {
     font-family: 'Lato', sans-serif;
     font-size: 3rem;
-    margin-bottom: 20px;
 }
+
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
 }
 
 .btn,
@@ -142,62 +152,45 @@ header {
     border-color: #000000;
 }
 
-.wrapper {
+.wrapper, .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
 }
 
 .content-wrapper {
-    padding: 10px;
+    text-align: center;
 }
 
-
-
-.grid-container {
+/* Grid Layout */
+.grid-layout {
     display: grid;
-    grid-template-columns: 1fr; 
-    gap: 20px; 
-    padding: 20px; 
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
-.intro {
-    background-color: #f3f0e9; 
-    
-    text-align: center;
-}
-
-.content-wrapper {
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.large-img {
-    margin-bottom: 20px; 
-}
-
-.large-img img {
-    display: block; 
+.large-img,
+.small-img {
     width: 100%;
-    max-width: 100%; 
-    height: auto;
 }
 
 .small-img {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 10px; 
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
-.small-img img {
+img {
+    display: block;
     width: 100%;
-    max-width: 100%; 
     height: auto;
 }
 
-
-.offers {
+.offers,
+.menu,
+.locations,
+.about,
+{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,21 +198,21 @@ header {
     padding: 50px 20px;
 }
 
-.offers .orangep {
+.offers .otxt {
     color: #d69e3d;
 }
 
-.offer-grid {
+.offer-grid,
+.about-grid {
     display: grid;
     gap: 20px;
-    padding: 20px;
 }
 
 .offer-item {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
 }
 
 .offer-item img {
@@ -239,31 +232,12 @@ header {
     color: #ffffff;
 }
 
-.menu, .locations {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-}
-
 .about img {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
 }
 
-.about .content-wrapper {
-    text-align: left;
-}
 
 .testimonials {
     background-color: #000000;
@@ -309,24 +283,21 @@ header {
 
 .testimonial-text {
     position: relative;
-    z-index: 1; 
+    z-index: 1; /* Ensure text is above overlay */
 }
 
 blockquote {
     color: white;
     text-align: left;
-    z-index: 1; 
+    z-index: 1; /* Ensure text is above overlay */
 }
-
 
 .customer-name {
     margin-top: 10px;
     font-weight: bold;
     color: #d69e3d;
-    z-index: 1; 
+    z-index: 1; /* Ensure text is above overlay */
 }
-
-
 
 .overlay {
     position: absolute;
@@ -334,9 +305,10 @@ blockquote {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 0; 
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+    z-index: 0; /* Ensure overlay is below text */
 }
+
 
 .line {
     border: 0;
@@ -353,21 +325,11 @@ blockquote {
     color: #ffffff;
 }
 
-.orangep {
-    color: #d69e3d;
-}
-
 /* Media Queries */
 @media (min-width: 768px) {
     .main-nav {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo img {
-        width: 200px; 
-        margin-bottom: 0;
     }
 
     .nav a {
@@ -375,36 +337,33 @@ blockquote {
         text-transform: uppercase;
     }
 
-
-
-    .offer-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 20px;
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .offer-item {
-        text-align: center;
+    .offer-grid,
+    
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+
+  
 
     .offer-item:nth-child(3) {
-        grid-column: span 2; 
+        grid-column: span 2;
     }
 
-    .explore .content-wrapper {
-        display: grid;
+    .explore .content-wrapper,
+    .about-grid {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+        align-items: center;
     }
 
-    .menu-section,
-    .locations-section {
-        padding: 20px;
-    }
-
+    
     .testimonial-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width as needed */
         gap: 20px;
         max-width: 1000px;
         margin: 0 auto;
@@ -460,32 +419,15 @@ blockquote {
     }
 }
 
-@media (min-width: 1099px) {
-     
-    .main-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .logo img {
-        width: 200px; 
-        margin-bottom: 0;
-    }
-    .nav a {
-        font-size: 18px;
-        text-transform: uppercase;
-    }
 
-    
+
+@media (min-width: 1099px) {
     .offer-grid {
         display: flex;
         justify-content: space-between; 
-        gap: 20px; 
     }
 
     .offer-item {
-        flex: 1; 
-        text-align: center;
+        flex: 1;
     }
 }
