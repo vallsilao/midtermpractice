@@ -1,4 +1,3 @@
-/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,10 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
     margin-bottom: 20px;
 }
 
@@ -40,9 +42,9 @@ header {
 
 .main-nav {
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 20px 20px;
-    text-align: center; 
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +53,7 @@ header {
 .nav {
     display: flex;
     gap: 20px;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .nav a {
@@ -67,7 +69,7 @@ header {
 
 .hero {
     position: relative;
-    background-image: url('../images/hero-background.jpg'); 
+    background-image: url('../images/hero-background.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -86,7 +88,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -141,7 +143,7 @@ header {
 }
 
 .t-btn:hover {
-    background-color: #ffffff;
+    background-color: #fffff1;
     color: #000000;
     border-color: #ffffff;
 }
@@ -152,10 +154,10 @@ header {
     border-color: #000000;
 }
 
-.wrapper, .content-wrapper {
+.wrapper,
+.content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
 }
 
 .content-wrapper {
@@ -189,8 +191,7 @@ img {
 .offers,
 .menu,
 .locations,
-.about,
-{
+.about {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,6 +231,24 @@ img {
     padding: 20px;
     text-align: center;
     color: #ffffff;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.explore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.explore .content-wrapper {
+    position: relative;
+    z-index: 2;
 }
 
 .about img {
@@ -238,12 +257,12 @@ img {
     margin-bottom: 20px;
 }
 
-
 .testimonials {
     background-color: #000000;
     color: #ffffff;
     padding: 50px 20px;
     text-align: center;
+    margin-top: 10px;
 }
 
 .testimonial-grid {
@@ -283,20 +302,23 @@ img {
 
 .testimonial-text {
     position: relative;
-    z-index: 1; /* Ensure text is above overlay */
+    z-index: 1;
+
 }
 
 blockquote {
     color: white;
     text-align: left;
-    z-index: 1; /* Ensure text is above overlay */
+    z-index: 1;
+
 }
 
 .customer-name {
     margin-top: 10px;
     font-weight: bold;
     color: #d69e3d;
-    z-index: 1; /* Ensure text is above overlay */
+    z-index: 1;
+
 }
 
 .overlay {
@@ -305,16 +327,26 @@ blockquote {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
-    z-index: 0; /* Ensure overlay is below text */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+
 }
 
+.intro-txt,
+.about-txt,
+.test-txt {
+    text-align: left;
+    margin: 20px;
+}
+
+.otxt {
+    color: #d69e3d;
+}
 
 .line {
     border: 0;
     height: 1px;
     color: white;
-    margin: 40px 0;
 }
 
 .footer {
@@ -327,6 +359,23 @@ blockquote {
 
 /* Media Queries */
 @media (min-width: 768px) {
+
+    h1 {
+        font-size: 2.986rem;
+    }
+
+    h2 {
+        font-size: 2.488rem;
+    }
+
+    h3 {
+        font-size: 1.728rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
     .main-nav {
         flex-direction: row;
         justify-content: space-between;
@@ -342,12 +391,9 @@ blockquote {
     }
 
     .offer-grid,
-    
     .about-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-  
 
     .offer-item:nth-child(3) {
         grid-column: span 2;
@@ -360,10 +406,16 @@ blockquote {
         align-items: center;
     }
 
-    
+    .ex-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .testimonial-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width as needed */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Adjust column width as needed */
         gap: 20px;
         max-width: 1000px;
         margin: 0 auto;
@@ -374,8 +426,6 @@ blockquote {
         overflow: hidden;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
-    
 
     .testimonial-content {
         position: absolute;
@@ -400,8 +450,6 @@ blockquote {
         font-weight: bold;
     }
 
-
-
     .about-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -419,15 +467,35 @@ blockquote {
     }
 }
 
-
-
 @media (min-width: 1099px) {
+
+    h1 {
+        font-size: 3.815rem;
+    }
+
+    h2 {
+        font-size: 3.052rem;
+    }
+
+    h3 {
+        font-size: 1.953rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
     .offer-grid {
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
     }
 
     .offer-item {
         flex: 1;
     }
+
+
+
+
+
 }
