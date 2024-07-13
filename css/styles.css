@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
 }
 
+/* Typography */
 h1,
 h2,
 h3,
@@ -34,6 +35,7 @@ p {
     font-size: 16px;
 }
 
+/* Header */
 header {
     background-color: #000000;
     color: #ffffff;
@@ -44,16 +46,14 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 20px;
-    text-align: center;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
 .nav {
     display: flex;
     gap: 20px;
-    justify-content: center;
 }
 
 .nav a {
@@ -61,11 +61,14 @@ header {
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 .nav a:hover {
     color: #d69e3d;
 }
+
 
 .hero {
     position: relative;
@@ -106,6 +109,7 @@ header {
     font-size: 1.2rem;
 }
 
+
 .btn,
 .t-btn,
 .b-btn {
@@ -113,8 +117,8 @@ header {
     padding: 5px 20px;
     text-decoration: none;
     font-family: 'Karla', sans-serif;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .btn {
@@ -135,7 +139,7 @@ header {
     border: 1px solid #000000;
 }
 
-/* Hover Effects */
+
 .btn:hover {
     background-color: #d69e3d;
     color: #ffffff;
@@ -154,17 +158,15 @@ header {
     border-color: #000000;
 }
 
+
 .wrapper,
 .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.content-wrapper {
+    padding: 20px;
     text-align: center;
 }
 
-/* Grid Layout */
 .grid-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -188,155 +190,14 @@ img {
     height: auto;
 }
 
+
 .offers,
 .menu,
-.loc,
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.offers .otxt {
-    color: #d69e3d;
-}
-
-.offer-grid,
-.about-grid {
-    display: grid;
-    gap: 20px;
-}
-
-.offer-item {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.offer-item img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.explore {
-    position: relative;
-    background-image: url('../images/coffee-shop.jpeg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    padding: 20px;
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-
-.explore::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.explore .content-wrapper {
-    position: relative;
-    z-index: 2;
-}
-
-.about img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
+.about,
+.explore,
 .testimonials {
-    background-color: #000000;
-    color: #ffffff;
     padding: 50px 20px;
     text-align: center;
-    margin-top: 10px;
-}
-
-.testimonial-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.testimonial-item {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-}
-
-.testimonial-item img {
-    width: 100%;
-    height: auto;
-}
-
-.testimonial-content {
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.testimonial-content p,
-.testimonial-content h2 {
-    text-align: left;
-}
-
-.testimonial-text {
-    position: relative;
-    z-index: 1;
-
-}
-
-blockquote {
-    color: white;
-    text-align: left;
-    z-index: 1;
-
-}
-
-.customer-name {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #d69e3d;
-    z-index: 1;
-
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-
-}
-
-.intro-txt,
-.about-txt,
-.test-txt {
-    text-align: left;
-    margin: 20px;
 }
 
 .otxt {
@@ -346,18 +207,17 @@ blockquote {
 .line {
     border: 0;
     height: 1px;
-    color: white;
+    background-color: white;
 }
+
 
 .footer {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
     background-color: #000000;
     color: #ffffff;
+    text-align: center;
+    padding: 20px;
 }
 
-/* Media Queries */
 @media (min-width: 768px) {
 
     h1 {
@@ -376,94 +236,34 @@ blockquote {
         font-size: 1rem;
     }
 
-    .main-nav {
-        flex-direction: row;
-        justify-content: space-between;
+    .nav {
+        gap: 30px;
     }
 
-    .nav a {
-        font-size: 18px;
-        text-transform: uppercase;
+    .main-nav {
+        padding: 20px 40px;
     }
 
     .grid-layout {
         grid-template-columns: 1fr 1fr;
     }
 
-    .offer-grid,
-    .about-grid {
+    .small-img {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .offer-item:nth-child(3) {
-        grid-column: span 2;
-    }
-
-    .explore .content-wrapper,
+    .offer-grid,
     .about-grid {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-        align-items: center;
-    }
-
-    .ex-grid {
-        display: flex;
-        justify-content: space-between;
         align-items: center;
     }
 
     .testimonial-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        /* Adjust column width as needed */
         gap: 20px;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-
-    .testimonial-item {
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .testimonial-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        color: #ffffff;
-    }
-
-    .testimonial-text {
-        margin-bottom: 10px;
-    }
-
-    blockquote {
-        margin: 0;
-        font-style: italic;
-    }
-
-    .customer-name {
-        font-weight: bold;
-    }
-
-    .about-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .about-image img {
-        width: 100%;
-        height: auto;
-    }
-
-    .about-text {
-        text-align: left;
     }
 }
 
@@ -486,16 +286,6 @@ blockquote {
     }
 
     .offer-grid {
-        display: flex;
         justify-content: space-between;
     }
-
-    .offer-item {
-        flex: 1;
-    }
-
-
-
-
-
 }
