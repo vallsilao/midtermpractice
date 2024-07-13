@@ -18,15 +18,27 @@
 </head>
 
 <body>
-    <header id="header-id" class="header">
-        <div  id="main-id" class="main-nav">
+    <ul class="skip-links" role="navigation" aria-label="Skip links">
+        <li><a href="#nav-id">Skip to Navigation</a></li>
+        <li><a href="#hero-id">Skip to Hero Section</a></li>
+        <li><a href="#intro-id">Skip to Introduction</a></li>
+        <li><a href="#offers-id">Skip to Offers</a></li>
+        <li><a href="#explore-id">Skip to Explore</a></li>
+        <li><a href="#about-id">Skip to About</a></li>
+        <li><a href="#test-id">Skip to Testimonials</a></li>
+
+    </ul>
+
+
+    <header id="header-id" class="header" role="banner">
+        <div id="main-id" class="main-nav">
             <div class="logo">
                 <a href="#">
                     <img id="logo-id" src="images/my-coffee-shop-logo.svg" alt="My Coffee Shop Logo">
                 </a>
             </div>
 
-            <nav id="nav-id" class="nav">
+            <nav id="nav-id" class="nav" role="navigation" aria-label="Main Navigation">
                 <a href="#about-id">ABOUT US</a>
                 <a href="#menu-id">MENU</a>
                 <a href="#loc-id">LOCATIONS</a>
@@ -34,7 +46,7 @@
         </div>
     </header>
 
-    <div id="hero-id" class="hero">
+    <div id="hero-id" class="hero" role="banner">
         <div class="overlay"></div>
         <div class="hero-content">
             <h1>EXPERIENCE COFFEE LIKE NEVER BEFORE</h1>
@@ -44,8 +56,8 @@
         </div>
     </div>
     <div class="wrapper">
-        <section class="grid-container">
-            <div id="intro-id" class="intro">
+        <section class="grid-container" role="main">
+            <div id="intro-id" class="intro" role="region" aria-label="Introduction">
                 <div class="content-wrapper">
                     <div class="intro-txt">
                         <p class="otxt">WELCOME TO MY COFFEE HOUSE</p>
@@ -58,8 +70,10 @@
                         <div class="small-img">
                             <img src="images/coffee-beans.jpeg" alt="Coffee Beans in a cup">
                             <img src="images/pouring-coffee.jpeg" alt="Pouring of Coffee to a pitcher">
-                            <img src="images/three-cups.jpeg" alt="one cup coffee bean, and two cups  latte with latte art">
-                            <img src="images/smiling-employee.jpeg" alt="Coffee Maker">
+                            <img src="images/three-cups.jpeg"
+                                alt="one cup coffee bean, and two cups latte with latte art">
+                            <img src="images/smiling-employee.jpeg"
+                                alt="Female barista with glasses smiling">
                         </div>
                     </div>
                 </div>
@@ -68,25 +82,25 @@
 
 
 
-        <section id="offers-id" class="offers">
+        <section id="offers-id" class="offers" role="region" aria-label="Offers">
             <div class="content-wrapper">
                 <p class="otxt">WHAT WE OFFER</p>
                 <h2>Why Visit Us?</h2>
                 <div class="offer-grid">
                     <div class="offer-item">
-                        <img src="images/fair-trade.svg" alt="Fair Trade Coffee">
+                        <img src="images/fair-trade.svg" alt="Fair Trade Coffee icon">
                         <h3>FAIR TRADE COFFEE</h3>
                         <p>We build direct relationships with the farmers and producers who help in the development of
                             delicious, sustainable and organic coffee.</p>
                     </div>
                     <div class="offer-item">
-                        <img src="images/local-baked-goods.svg" alt="Local Baked Goods">
+                        <img src="images/local-baked-goods.svg" alt="Basket with bread icon">
                         <h3>LOCAL BAKED GOODS</h3>
                         <p>We use local products to bake our goods and bring in a variety of treats from local bakers
                             with our community.</p>
                     </div>
                     <div class="offer-item">
-                        <img src="images/made-with-love.svg" alt="Made with Love">
+                        <img src="images/made-with-love.svg" alt="Coffee cup icon ">
                         <h3>MADE WITH LOVE</h3>
                         <p>We value our customers and make it our priority to serve everyone with respect and a friendly
                             smile to start their day off right.</p>
@@ -94,18 +108,18 @@
                 </div>
             </div>
         </section>
-        <section id="explore-id" class="explore">
+        <section id="explore-id" class="explore" role="region" aria-label="Explore">
             <div class="content-wrapper">
 
                 <div class="ex-grid">
 
-                    <div id="menu-id" class="menu">
+                    <div id="menu-id" class="menu" role="article" aria-label="Menu">
                         <p class="otxt">OUR MENU</p>
                         <h2>Explore what we have to offer you</h2>
                         <a href="#" class="btn">Explore our menu</a>
                     </div>
 
-                    <div id="loc-id" class="locations">
+                    <div id="loc-id" class="locations" role="article" aria-label="Locations">
                         <p class="otxt">LOCATIONS</p>
                         <h2>Find Your Nearest Coffee Shop</h2>
                         <a href="#" class="t-btn">View Locations</a>
@@ -114,11 +128,12 @@
 
             </div>
         </section>
-        <section id="about-id" class="about">
+        <section id="about-id" class="about" role="article" aria-label="About">
             <div class="content-wrapper">
                 <div class="about-grid">
                     <div class="about-image">
-                        <img src="images/about-us.jpeg" alt="Coffee Pouring">
+                        <img src="images/about-us.jpeg"
+                            alt="A male barista watches as a female barista waits with a cup near the coffee machine">
                     </div>
                     <div class="about-txt">
                         <p class="otxt">ABOUT US</p>
@@ -136,7 +151,7 @@
                 </div>
             </div>
         </section>
-        <section id="test-id" class="testimonials">
+        <section id="test-id" class="testimonials" role="region" aria-label="Testimonials">
             <div class="content-wrapper">
                 <div class="test-txt">
                     <p class="otxt">TESTIMONIALS</p>
@@ -158,7 +173,7 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="overlay"></div>
-                        <img src="images/testimonial-2.jpeg" alt="Scott S. enjoying coffee">
+                        <img src="images/testimonial-2.jpeg" alt="Scott S. enjoying his coffee">
                         <div class="testimonial-content">
                             <div class="testimonial-text">
                                 <blockquote>
@@ -171,7 +186,8 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="overlay"></div>
-                        <img src="images/testimonial-3.jpeg" alt="Susie F. with coffee">
+                        <img src="images/testimonial-3.jpeg"
+                            alt="Susie F. using his laptop while drinking coffee">
                         <div class="testimonial-content">
                             <div class="testimonial-text">
                                 <blockquote>
@@ -180,7 +196,7 @@
                                     <p class="customer-name">Susie F., Ottawa</p>
                                 </blockquote>
 
-                                
+
                             </div>
                         </div>
                     </div>
@@ -190,12 +206,11 @@
     </div>
 
 
-    
-    
-    
-    
-    <footer class="footer">
-        <hr class="line"> 
+
+
+
+    <footer class="footer" role="contentinfo">
+        <hr class="line">
         <p>© My Coffee Company 2024</p>
     </footer>
 
