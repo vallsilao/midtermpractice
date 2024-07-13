@@ -3,73 +3,58 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Karla', sans-serif;
     background-color: #f3f0e9;
     color: #000000;
     line-height: 1.6;
 }
-
-/* Typography */
 h1,
 h2,
 h3,
 p {
     margin-bottom: 20px;
 }
-
 h1 {
     font-size: 2.027rem;
 }
-
 h2 {
     font-size: 1.802rem;
 }
-
 h3 {
     font-size: 1.424rem;
 }
-
 p {
     font-size: 16px;
 }
-
-/* Header */
 header {
     background-color: #000000;
     color: #ffffff;
     padding: 10px 20px;
 }
-
 .main-nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 20px;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
-
 .nav {
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
-
 .nav a {
     color: #ffffff;
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
 }
-
 .nav a:hover {
     color: #d69e3d;
 }
-
-
 .hero {
     position: relative;
     background-image: url('../images/hero-background.jpg');
@@ -84,7 +69,6 @@ header {
     justify-content: center;
     align-items: center;
 }
-
 .overlay {
     position: absolute;
     top: 0;
@@ -93,23 +77,18 @@ header {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
 }
-
 .hero-content {
     position: relative;
     z-index: 1;
     max-width: 600px;
 }
-
 .hero h1 {
     font-family: 'Lato', sans-serif;
     font-size: 3rem;
 }
-
 .hero p {
     font-size: 1.2rem;
 }
-
-
 .btn,
 .t-btn,
 .b-btn {
@@ -117,175 +96,326 @@ header {
     padding: 5px 20px;
     text-decoration: none;
     font-family: 'Karla', sans-serif;
-    font-weight: bold;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-weight: bold;
 }
-
 .btn {
     background-color: #ffffff;
     color: #000000;
     border: 1px solid #000000;
 }
-
 .t-btn {
     background-color: transparent;
     color: #ffffff;
     border: 1px solid #ffffff;
 }
-
 .b-btn {
     background-color: #000000;
     color: #ffffff;
     border: 1px solid #000000;
 }
-
-
+/* Hover Effects */
 .btn:hover {
     background-color: #d69e3d;
     color: #ffffff;
     border-color: #ffffff;
 }
-
 .t-btn:hover {
     background-color: #fffff1;
     color: #000000;
     border-color: #ffffff;
 }
-
 .b-btn:hover {
     background-color: #d69e3d;
     color: #ffffff;
     border-color: #000000;
 }
-
-
 .wrapper,
 .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+}
+.content-wrapper {
     text-align: center;
 }
-
+/* Grid Layout */
 .grid-layout {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
-
 .large-img,
 .small-img {
     width: 100%;
 }
-
 .small-img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
-
 img {
     display: block;
     width: 100%;
     height: auto;
 }
-
-
 .offers,
 .menu,
-.about,
-.explore,
+.locations,
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+.offers .otxt {
+    color: #d69e3d;
+}
+.offer-grid,
+.about-grid {
+    display: grid;
+    gap: 20px;
+}
+.offer-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.offer-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.explore {
+    position: relative;
+    background-image: url('../images/coffee-shop.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.explore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.explore .content-wrapper {
+    position: relative;
+    z-index: 2;
+}
+.about img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
 .testimonials {
+    background-color: #000000;
+    color: #ffffff;
     padding: 50px 20px;
     text-align: center;
+    margin-top: 10px;
 }
-
+.testimonial-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.testimonial-item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.testimonial-item img {
+    width: 100%;
+    height: auto;
+}
+.testimonial-content {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.testimonial-content p,
+.testimonial-content h2 {
+    text-align: left;
+}
+.testimonial-text {
+    position: relative;
+    z-index: 1;
+}
+blockquote {
+    color: white;
+    text-align: left;
+    z-index: 1;
+}
+.customer-name {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #d69e3d;
+    z-index: 1;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+.intro-txt,
+.about-txt,
+.test-txt {
+    text-align: left;
+    margin: 20px;
+}
 .otxt {
     color: #d69e3d;
 }
 
 .line {
-    border: 0;
+    
     height: 1px;
-    background-color: white;
+    background-color: #ffffff; /* Adjust color as needed */
+    width: 80%;
+    margin: 20px auto; /* Adjust margin as needed */
 }
-
-
 .footer {
+    
+    justify-content: center;
+    padding: 20px;
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-    padding: 20px;
+    
 }
-
+/* Media Queries */
 @media (min-width: 768px) {
-
     h1 {
         font-size: 2.986rem;
     }
-
     h2 {
         font-size: 2.488rem;
     }
-
     h3 {
         font-size: 1.728rem;
     }
-
     p {
         font-size: 1rem;
     }
-
-    .nav {
-        gap: 30px;
-    }
-
     .main-nav {
-        padding: 20px 40px;
+        flex-direction: row;
+        justify-content: space-between;
     }
-
+    .nav a {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
     .grid-layout {
         grid-template-columns: 1fr 1fr;
     }
-
-    .small-img {
+    .offer-grid,
+    .about-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .offer-grid,
+    .offer-item:nth-child(3) {
+        grid-column: span 2;
+    }
+    .explore .content-wrapper,
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+    .ex-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Adjust column width as needed */
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .testimonial-item {
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .testimonial-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #ffffff;
+    }
+    .testimonial-text {
+        margin-bottom: 10px;
+    }
+    blockquote {
+        margin: 0;
+        font-style: italic;
+    }
+    .customer-name {
+        font-weight: bold;
+    }
     .about-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
         align-items: center;
     }
-
-    .testimonial-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
+    .about-image img {
+        width: 100%;
+        height: auto;
+    }
+    .about-text {
+        text-align: left;
     }
 }
-
 @media (min-width: 1099px) {
-
     h1 {
         font-size: 3.815rem;
     }
-
     h2 {
         font-size: 3.052rem;
     }
-
     h3 {
         font-size: 1.953rem;
     }
-
     p {
         font-size: 1rem;
     }
-
     .offer-grid {
+        display: flex;
         justify-content: space-between;
     }
+    .offer-item {
+        flex: 1;
+    }
+
+
+
+
 }
